@@ -1,0 +1,27 @@
+
+<div class="container">
+    <br>
+    <H3>Featured Movies</H3>
+    <hr>
+    <div class="row">
+        <div class="col" *ngFor="let m of movies;let i=index">
+                <div class="card text-white bg-black mb-3"  style="width: 18rem;" >
+                    <img src="{{m.posterurl}}" class="card-img-top cardimg" alt="...">
+                    <div class="card-header">{{m.name}}</div>
+                    <div class="card-body">
+                      <!-- <div class="col" *ngFor="let g of m.moviegenre">
+                        <h5 class="card-title" > {{g.genre}}</h5>
+                      </div> -->
+                      
+                      <!-- <p class="card-text">{{m.description}}</p> -->
+                      <p>{{m.hours}} HR {{m.minutes}} MIN | {{m.rating}}</p>
+                      <p>Released {{m.releasedate}}</p>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger"  (click)="gotoaboutmovie(m)">Get Tickets</button>
+              </div>
+        </div>
+    </div>
+    
+    
+</div>
+<!-- <p>{{movies[0].name}}</p> -->

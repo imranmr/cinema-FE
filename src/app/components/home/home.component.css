@@ -1,0 +1,17 @@
+p{
+    color: white;
+}
+.card{
+    margin: 2% 5%;
+    background-color: black;
+    /* border: px solid black; */
+
+}
+.card-img-top{
+    width: 200px;  
+    max-height: 250px;
+
+}
+.container{
+    color:white;
+}
