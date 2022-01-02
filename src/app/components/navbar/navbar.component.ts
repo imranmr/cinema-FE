@@ -1,3 +1,4 @@
+import { DataserviceService } from 'src/app/services/dataservice.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  user:any;
+  constructor(private data:DataserviceService) { }
 
   ngOnInit(): void {
+    this.data.currentuser.subscribe(user=>this.user=user);
   }
 
 }

@@ -1,0 +1,8 @@
+h1,label{
+    color: white;
+}
+.error{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
