@@ -12,6 +12,8 @@ import { AboutmovieComponent } from './components/aboutmovie/aboutmovie.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MycartComponent } from './components/mycart/mycart.component';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     AboutmovieComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    MycartComponent,
+    ResetpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [MoviesService, AuthGuard],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,10 +10,12 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean{
+      console.log("Auth Guard: ",localStorage.getItem('isLoggedIn'));
       if(this.isLoggedIn()){
         return true;
       }
       this.router.navigate(['/login']);
+      
       return false;
   }
   

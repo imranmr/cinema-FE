@@ -1,0 +1,8 @@
+h1,th,td{
+    color:white
+}
+.quantitybox{
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 15%;
+}

@@ -20,4 +20,9 @@ export class DataserviceService {
     this.user.next(user);
   }
 
+  logout() :void {    
+      localStorage.setItem('isLoggedIn','false'); 
+      this.updateUser('null');     
+  }    
+
 }

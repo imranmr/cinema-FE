@@ -1,0 +1,38 @@
+
+   
+<div class="container mt-5 ">
+    <h1 text-center>My Cart</h1>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Ticket Price</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Total Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="user.adminrights != true">
+        
+            <tr *ngFor="let ci of user.cart.cartitems" >
+                <th scope="row">{{ci.movie.name}}</th>
+                <td>{{ci.movie.price | currency:'USD'}}</td>
+                <td>{{ci.seats}}</td>
+                <td>{{ci.price  | currency:'USD'}}</td>
+                <td>
+                    <form>
+                      <label for="quantity">Change Seats:</label>
+                        <input class=quantitybox type="number" min="1" value="1" max={{ci.cartitemquantity}} id="quantity" name="quantity" #quantity>
+                        <button class="btn btn-danger" (click)="onDelete(ci.product.productid,user.cart.cartid, quantity.value)">Delete</button>
+                    </form>
+
+                </td>
+                
+                
+              </tr>
+    
+          
+        </tbody>
+      </table>
+</div>

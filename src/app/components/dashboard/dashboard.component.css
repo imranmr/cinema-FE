@@ -1,0 +1,13 @@
+h1,h3{
+    color:white;
+}
+.passbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.card {
+    margin-bottom: 5%;
+    border: 2px;
+    background-color: whitesmoke;
+}
