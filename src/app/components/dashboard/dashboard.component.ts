@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
     this.userservice.getlatestuserdetail(userdetail).subscribe(
       (res:any)=>{
         this.user = res;
+        this.data.updateUser(res);
       }
     )
 
