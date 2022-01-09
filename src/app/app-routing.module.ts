@@ -1,3 +1,5 @@
+import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
+import { OrderpageComponent } from './components/orderpage/orderpage.component';
 import { PickseatsComponent } from './components/pickseats/pickseats.component';
 import { MovietimesComponent } from './components/movietimes/movietimes.component';
 import { LocationComponent } from './components/location/location.component';
@@ -19,10 +21,12 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"dashboard",component:DashboardComponent,canActivate:[AuthGuard]},
   {path:"mycart",component:MycartComponent,canActivate:[AuthGuard]},
-  {path:"resetpassword",component:ResetpasswordComponent},
+  {path:"resetpassword",component:ResetpasswordComponent,canActivate:[AuthGuard]},
   {path:"location",component:LocationComponent},
   {path:"movietimes",component:MovietimesComponent},
-  {path:"seats",component:PickseatsComponent}
+  {path:"seats",component:PickseatsComponent},
+  {path:"orderpage",component:OrderpageComponent,canActivate:[AuthGuard]},
+  {path:"confirmationpage",component:ConfirmationpageComponent}
 ];
 
 @NgModule({

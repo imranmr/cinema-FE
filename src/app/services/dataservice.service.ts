@@ -20,6 +20,9 @@ export class DataserviceService {
   private seats = new BehaviorSubject('null');
   currentseats=this.seats.asObservable();
 
+  private order = new BehaviorSubject('null');
+  currentorder=this.order.asObservable();
+
   constructor() { }
 
   updateMovie(movie:any){
@@ -40,6 +43,10 @@ export class DataserviceService {
 
   updateSeats(seats:any){
     this.seats.next(seats);
+  }
+
+  updateOrder(order:any){
+    this.order.next(order);
   }
 
   logout() :void {    

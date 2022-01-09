@@ -19,20 +19,23 @@
                 <th scope="row">{{ci.movie.name}}</th>
                 <td>{{ci.movie.price | currency:'USD'}}</td>
                 <td>{{ci.seats}}</td>
-                <td>{{ci.price  | currency:'USD'}}</td>
+                <td>{{ci.price*ci.seats  | currency:'USD'}}</td>
                 <td>
                     <form>
                       <label for="quantity">Change Seats:</label>
                         <input class=quantitybox type="number" min="1" value="1" max={{ci.cartitemquantity}} id="quantity" name="quantity" #quantity>
                         <button class="btn btn-danger" (click)="onDelete(ci.product.productid,user.cart.cartid, quantity.value)">Delete</button>
                     </form>
-
                 </td>
-                
-                
               </tr>
-    
-          
         </tbody>
       </table>
+      <div class="row">
+        <div class="col">
+          <p>Total Price: {{user.cart.totalprice|currency:'USD'}}</p>
+        </div>
+        <div class="col">
+          <button class="btn btn-outline-primary" (click)="buynow()">Buy Now</button>
+        </div>
+      </div>
 </div>

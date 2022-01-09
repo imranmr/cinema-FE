@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <H1>Order Confirmed! Order ID: {{order.orderid}}</H1>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Ticket Price</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let oi of order.orderitems" >
+                <th scope="row">{{oi.movie.name}}</th>
+                <td>{{oi.movie.price | currency:'USD'}}</td>
+                <td>{{oi.seats}}</td>
+                <td>{{oi.price*oi.seats  | currency:'USD'}}</td>
+                
+              </tr>
+        </tbody>
+      </table>
+      <p>Total Price: {{order.totalprice|currency:'USD'}}</p>
+
+      <Button class="btn btn-primary" routerLink="/dashboard"> Go To Dashboard </Button>
+</div>

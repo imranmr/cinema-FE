@@ -8,6 +8,8 @@ import { Injectable } from '@angular/core';
 export class UserService {
   private resetpasswordurl:string="http://localhost:8080/user/resetpassword"
   private addtocarturl:string="http://localhost:8080/cart/add"
+  private buycarturl:string="http://localhost:8080/order/buy"
+  private getlatestuserurl:string="http://localhost:8080/user/detail"
   constructor(private httpClient:HttpClient,private data:DataserviceService) { }
 
   public resetpassword(user:any){
@@ -17,4 +19,13 @@ export class UserService {
   public addtocart(data:any){
     return this.httpClient.post(this.addtocarturl,data);
   }
+
+  public buycart(data:any){
+    return this.httpClient.post(this.buycarturl,data);
+  }
+
+  public getlatestuserdetail(user:any){
+    return this.httpClient.post(this.getlatestuserurl,user);
+  }
+
 }

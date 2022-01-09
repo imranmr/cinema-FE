@@ -18,6 +18,8 @@ import { LocationComponent } from './components/location/location.component';
 import { MovietimesComponent } from './components/movietimes/movietimes.component';
 import { ToTwelveHourTimePipe } from './to-twelve-hour-time.pipe';
 import { PickseatsComponent } from './components/pickseats/pickseats.component';
+import { OrderpageComponent } from './components/orderpage/orderpage.component';
+import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PickseatsComponent } from './components/pickseats/pickseats.component';
     LocationComponent,
     MovietimesComponent,
     ToTwelveHourTimePipe,
-    PickseatsComponent
+    PickseatsComponent,
+    OrderpageComponent,
+    ConfirmationpageComponent
   ],
   imports: [
     BrowserModule,

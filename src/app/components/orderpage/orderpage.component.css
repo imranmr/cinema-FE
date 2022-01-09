@@ -1,8 +1,13 @@
-h1,th,td,p{
+h1,th,td,p,label,h3{
     color:white
 }
 .quantitybox{
     margin-left: 5%;
     margin-right: 5%;
     max-width: 15%;
+}
+.error{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
 }

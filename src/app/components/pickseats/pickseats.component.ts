@@ -44,7 +44,7 @@ export class PickseatsComponent implements OnInit {
           "password":this.user.password
         }
         this.authservice.login(userlogin).subscribe((res:any)=>this.data.updateUser(res));
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['mycart'])
 
       },(error:any)=>{
         console.log("Error add to cart:",error);

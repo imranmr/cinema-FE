@@ -18,4 +18,9 @@ export class MycartComponent implements OnInit {
     console.log("Deleting!!");
 
   }
+
+  buynow(){
+    console.log("Clicked Buy")
+    this.router.navigate(["orderpage"])
+  }
 }
