@@ -1,7 +1,20 @@
 
 <div class="container">
     <br>
-    <H3>Featured Movies</H3>
+
+    <div class="row">
+      <div class="col">
+        <H3>Featured Movies</H3>
+      </div>
+      <div class="col">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm" >Search Movie</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #searchinput>
+          <button class="btn btn-primary" (click)="searchmovie(searchinput.value)">Search</button>
+        </div>
+        
+      </div>
+    </div>
     <hr>
     <div class="row">
         <div class="col" *ngFor="let m of movies;let i=index">

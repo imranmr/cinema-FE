@@ -39,4 +39,18 @@ export class HomeComponent implements OnInit {
     this.messageEvent.emit(movie);
 
   }
+
+  searchmovie(name:any){
+    console.log("Searching movie",name);
+    let searchformat={
+      "name":"%"+name+"%"
+    }
+    console.log(searchformat);
+
+    this.movieservice.searchmovie(searchformat).subscribe(
+      (res:any)=>{
+        this.movies = res;
+      }
+    )
+  }
 }
