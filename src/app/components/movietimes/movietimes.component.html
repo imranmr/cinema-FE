@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Choose Timing for {{movies.name}}:</h1>
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" aria-current="true" *ngFor="let m of movietiming" (click)="picktime(m)">
+          {{m.date | date:'mediumDate' }} | {{m.time| toTwelveHourTime: 'hh:mm A'}}
+        </a>
+       
+      </div>
+
+</div>

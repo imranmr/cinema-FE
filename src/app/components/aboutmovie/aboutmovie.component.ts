@@ -11,7 +11,7 @@ export class AboutmovieComponent implements OnInit {
   constructor(private data: DataserviceService) { }
 
   ngOnInit(): void {
-    this.data.currentmessage.subscribe(message=>this.message=message);
+    this.data.currentmovie.subscribe(message=>this.message=message);
   }
 
 

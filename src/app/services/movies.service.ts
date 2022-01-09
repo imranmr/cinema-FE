@@ -8,10 +8,20 @@ import { Observable } from 'rxjs';
 export class MoviesService {
 
   private getallmoviesurl:string="http://localhost:8080/movie/all"
+  private getmovielocationsurl:string="http://localhost:8080/movietiming/get/location"
+  private getmovietimingurl:string="http://localhost:8080/movietiming/search/location"
   constructor(private httpClient:HttpClient) { }
 
   public getAllMovies():any{
     return this.httpClient.get(`${this.getallmoviesurl}`);
+  }
+
+  public getmovielocation(movie:any):any{
+    return this.httpClient.post(this.getmovielocationsurl,movie)
+  }
+
+  public getmovietimingatlocation(moviedata:any){
+    return this.httpClient.post(this.getmovietimingurl,moviedata);
   }
 
 }

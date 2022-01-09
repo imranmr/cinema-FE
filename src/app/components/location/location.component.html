@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Choose Location:</h1>
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" aria-current="true" *ngFor="let m of location" (click)="findmovietimes(m)">
+          {{m}}
+        </a>
+       
+      </div>
+
+</div>

@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   gotoaboutmovie(movie:any){
     console.log(movie);
-    this.data.changeMessage(movie);
+    this.data.updateMovie(movie);
     this.router.navigate(['aboutmovie'])
     this.messageEvent.emit(movie);
 

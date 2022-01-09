@@ -14,6 +14,10 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { LocationComponent } from './components/location/location.component';
+import { MovietimesComponent } from './components/movietimes/movietimes.component';
+import { ToTwelveHourTimePipe } from './to-twelve-hour-time.pipe';
+import { PickseatsComponent } from './components/pickseats/pickseats.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     DashboardComponent,
     LoginComponent,
     MycartComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    LocationComponent,
+    MovietimesComponent,
+    ToTwelveHourTimePipe,
+    PickseatsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,7 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,ToTwelveHourTimePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

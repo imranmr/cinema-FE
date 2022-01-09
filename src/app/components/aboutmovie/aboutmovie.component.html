@@ -1,6 +1,19 @@
 <div class="container">
+    <img src="{{message.posterurl}}" alt="">
     <div class="jumbotron jumbotron-fluid">
         <h1>{{message.name}}</h1>
     </div>
+    <a routerLink="/location" class="btn btn-danger">Get Tickets</a>
+    <div class="row">
+        <div class="col-sm-3">
+            <h5>{{message.hours}} HR {{message.minutes}} | {{message.rating}} </h5>
+            <h6> Released {{message.releasedate}}</h6>
+        </div>
+        <div class="col">
+            <h5>Description:</h5>
+            <p>{{message.description}}</p>
+        </div>
+    </div>
+    
     
 </div>
