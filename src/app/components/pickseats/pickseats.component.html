@@ -1,1 +1,12 @@
-<p>pickseats works!</p>
+<div class="container">
+    <h1>Pick Number of Seats</h1>
+    <br>
+    <br>
+    <h3>Total Remaining Seats: {{movietime.seats}} </h3>
+    <h6>How many seats would you like?</h6>
+    <form ng-submit="submitseats()" >
+        <input type="number" #seatsnumber min="1" max="{{movietime.seats}}">
+        <button class="btn btn-primary" #submitbutton (click)="setseats(seatsnumber.value)">Submit</button>
+    </form>
+    
+</div>

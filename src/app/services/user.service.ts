@@ -7,9 +7,14 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
   private resetpasswordurl:string="http://localhost:8080/user/resetpassword"
+  private addtocarturl:string="http://localhost:8080/cart/add"
   constructor(private httpClient:HttpClient,private data:DataserviceService) { }
 
   public resetpassword(user:any){
     return this.httpClient.put(this.resetpasswordurl,user);
+  }
+
+  public addtocart(data:any){
+    return this.httpClient.post(this.addtocarturl,data);
   }
 }
