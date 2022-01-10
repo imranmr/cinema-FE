@@ -62,8 +62,9 @@ export class DashboardComponent implements OnInit {
 
   updateTiming(timing:any){
     console.log("Update Timing:",timing);
+    this.data.updateMovieTime(timing);
+    this.router.navigate(['updatemovietime']);
   }
-
   deleteTiming(timing:any){
     console.log("Delete Timing:", timing);
   }

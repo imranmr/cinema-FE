@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Movie Time Details: </h1>
+    <p>Language: {{movietime.language}}</p>
+    <p>Seats: {{movietime.seats}}</p>
+    <p>Time: {{movietime.time | toTwelveHourTime:"hh:mm A"}}</p>
+    <p>Date: {{movietime.date}}</p>
+    <p>Location: {{movietime.location}}</p>
+
+    <form action="" (ngSubmit)="updatemovietime(language.value, seats.valueAsNumber, time.value, date.value,location.value)">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Language</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #language required>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Seats</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #seats required>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Time (HH:MM:SS)</span>
+                    <input type="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #time required>
+                </div>
+        
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Date (YYYY-mm-dd)</span>
+                    <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #date required>
+                </div>
+        
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Location</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #location required>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+
+</div>

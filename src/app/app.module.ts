@@ -22,6 +22,7 @@ import { OrderpageComponent } from './components/orderpage/orderpage.component';
 import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
 import { AddtimingComponent } from './components/addtiming/addtiming.component';
 import { UpdatemovieComponent } from './components/updatemovie/updatemovie.component';
+import { UpdatemovietimeComponent } from './components/updatemovietime/updatemovietime.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { UpdatemovieComponent } from './components/updatemovie/updatemovie.compo
     OrderpageComponent,
     ConfirmationpageComponent,
     AddtimingComponent,
-    UpdatemovieComponent
+    UpdatemovieComponent,
+    UpdatemovietimeComponent
   ],
   imports: [
     BrowserModule,
