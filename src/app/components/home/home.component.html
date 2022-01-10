@@ -6,6 +6,18 @@
       <div class="col">
         <H3>Featured Movies</H3>
       </div>
+    <div class="col">
+      <!-- Example single danger button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Genres
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" *ngFor="let g of genres" (click)="filtergenre(g)">{{g}}</a></li>
+        </ul>
+      </div>
+    </div>
+
       <div class="col">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm" >Search Movie</span>

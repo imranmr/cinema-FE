@@ -23,4 +23,7 @@ export class MycartComponent implements OnInit {
     console.log("Clicked Buy")
     this.router.navigate(["orderpage"])
   }
+  updateSeats(seats:any){
+    console.log("Update seats",seats);
+  }
 }

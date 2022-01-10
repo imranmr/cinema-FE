@@ -24,6 +24,7 @@
                     <form>
                       <label for="quantity">Change Seats:</label>
                         <input class=quantitybox type="number" min="1" value="1" max={{ci.cartitemquantity}} id="quantity" name="quantity" #quantity>
+                        <button class="btn btn-primary" (click)="updateSeats(quantity.value)">Update</button>
                         <button class="btn btn-danger" (click)="onDelete(ci.product.productid,user.cart.cartid, quantity.value)">Delete</button>
                     </form>
                 </td>

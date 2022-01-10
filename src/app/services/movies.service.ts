@@ -12,6 +12,8 @@ export class MoviesService {
   private getmovietimingurl:string="http://localhost:8080/movietiming/search/location"
   private getorderdetailsurl:string="http://localhost:8080/order/getorder"
   private searchmovieurl:string="http://localhost:8080/movie/search"
+  private getgenresurl:string="http://localhost:8080/moviegenre/all"
+  private searchmoviewithgenreurl:string="http://localhost:8080/movie/search/genre/"
   constructor(private httpClient:HttpClient) { }
 
   public getAllMovies():any{
@@ -33,4 +35,14 @@ export class MoviesService {
   public searchmovie(name:any){
     return this.httpClient.post(this.searchmovieurl,name);
   }
+
+  public getgenres(){
+    return this.httpClient.get(this.getgenresurl);
+  }
+
+  public getmoviefromgenre(genre:any){
+    return this.httpClient.get(this.searchmoviewithgenreurl+genre);
+  }
+
+
 }
