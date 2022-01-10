@@ -72,6 +72,10 @@
                             <h5 class="card-title">Movie Title: {{movie.name}} | Movie ID: {{movie.movieid}}</h5>
                             <p class="card-text">Total Price: <strong>{{movie.price| currency:'USD'}}</strong></p>
                             <p>Description: {{movie.description}} </p>
+                            <p>Runtime: {{movie.hours}}:{{movie.minutes}}</p>
+                            <p>Rating: {{movie.rating}}</p>
+                            <p>Release Date: {{movie.releasedate}}</p>
+                            <p>PosterURL: {{movie.posterurl}}</p>
                         </div>
                         <div class="col">
                             <button class="btn btn-primary moviebutton" (click)="updateMovie(movie)">Update Movie</button>

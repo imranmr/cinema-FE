@@ -21,6 +21,7 @@ import { PickseatsComponent } from './components/pickseats/pickseats.component';
 import { OrderpageComponent } from './components/orderpage/orderpage.component';
 import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
 import { AddtimingComponent } from './components/addtiming/addtiming.component';
+import { UpdatemovieComponent } from './components/updatemovie/updatemovie.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AddtimingComponent } from './components/addtiming/addtiming.component';
     PickseatsComponent,
     OrderpageComponent,
     ConfirmationpageComponent,
-    AddtimingComponent
+    AddtimingComponent,
+    UpdatemovieComponent
   ],
   imports: [
     BrowserModule,

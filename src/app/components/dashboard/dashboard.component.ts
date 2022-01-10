@@ -52,6 +52,8 @@ export class DashboardComponent implements OnInit {
 
   updateMovie(movie:any){
     console.log("Update Movie:",movie);
+    this.data.updateMovie(movie);
+    this.router.navigate(['updatemovie']);
   }
 
   deleteMovie(movie:any){

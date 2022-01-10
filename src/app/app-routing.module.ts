@@ -1,3 +1,4 @@
+import { UpdatemovieComponent } from './components/updatemovie/updatemovie.component';
 import { AddtimingComponent } from './components/addtiming/addtiming.component';
 import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
 import { OrderpageComponent } from './components/orderpage/orderpage.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:"seats",component:PickseatsComponent},
   {path:"orderpage",component:OrderpageComponent,canActivate:[AuthGuard]},
   {path:"confirmationpage",component:ConfirmationpageComponent},
-  {path:"addtiming",component:AddtimingComponent}
+  {path:"addtiming",component:AddtimingComponent},
+  {path:"updatemovie",component:UpdatemovieComponent}
 ];
 
 @NgModule({

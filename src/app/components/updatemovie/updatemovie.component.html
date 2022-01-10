@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Updating Movie:</h1>
+    <h3>Movie Details:</h3>
+    <p>Name: {{movie.name}}</p>
+    <p>Price: {{movie.price | currency:'USD'}}</p>
+    <p>Description: {{movie.description}}</p>
+    <p>Runtime: {{movie.hours}}:{{movie.minutes}}</p>
+    <p>Rating: {{movie.rating}}</p>
+    <p>Release Date: {{movie.releasedate}}</p>
+    <p>PosterURL: {{movie.posterurl}}</p>
+    <p>NOTE: ALL FIELDS REQUIRED!</p>
+    <br>
+    <form action="" (ngSubmit)="updateMovie(name.value, price.valueAsNumber, description.value, hours.valueAsNumber, minutes.valueAsNumber, rating.value, releasedate.value, posterurl.value)">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #name required>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Price</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #price required>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #description required>
+                </div>
+        
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Runtime: Hours</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #hours required>
+                </div>
+        
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Runtime: Minutes</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #minutes required>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Rating</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #rating required>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Release Date</span>
+                    <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #releasedate required>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Poster URL</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #posterurl required>
+                </div>
+
+
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+
+</div>
