@@ -1,3 +1,4 @@
+import { AddtimingComponent } from './components/addtiming/addtiming.component';
 import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
 import { OrderpageComponent } from './components/orderpage/orderpage.component';
 import { PickseatsComponent } from './components/pickseats/pickseats.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path:"movietimes",component:MovietimesComponent},
   {path:"seats",component:PickseatsComponent},
   {path:"orderpage",component:OrderpageComponent,canActivate:[AuthGuard]},
-  {path:"confirmationpage",component:ConfirmationpageComponent}
+  {path:"confirmationpage",component:ConfirmationpageComponent},
+  {path:"addtiming",component:AddtimingComponent}
 ];
 
 @NgModule({

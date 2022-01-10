@@ -17,7 +17,7 @@
         
 </div>
 <br>
-<div class="container">
+<div class="container" *ngIf="!user.adminrights">
     <h3>Orders</h3>
 
     <div class="card" *ngFor="let o of user.orders;let i=index">
@@ -56,4 +56,61 @@
     <br>
     </div>
     
+</div>
+
+<div class="container" *ngIf="user.adminrights">
+    <h3> Admin Portal: </h3>
+    <br>
+
+    <h3>Movies</h3>
+    <div class="card" *ngFor="let movie of movies">
+        <div class="row">
+            <div class="col">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title">Movie Title: {{movie.name}} | Movie ID: {{movie.movieid}}</h5>
+                            <p class="card-text">Total Price: <strong>{{movie.price| currency:'USD'}}</strong></p>
+                            <p>Description: {{movie.description}} </p>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary moviebutton" (click)="updateMovie(movie)">Update Movie</button>
+                            <button class="btn btn-danger moviebutton" (click)="deleteMovie(movie)">Delete Movie</button>
+                            <button class="btn btn-success moviebutton" (click)="addTiming(movie)">Add Timing</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Movie Timing ID</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Language</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Seats</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let timing of movie.movietiming">
+                                <th scope="row">{{timing.movietimingid}}</th>
+                                <td>{{timing.time | toTwelveHourTime: 'hh:mm A'}}</td>
+                                <td>{{timing.date}}</td>
+                                <td>{{timing.language}}</td>
+                                <td>{{timing.location}}</td>
+                                <td>{{timing.seats}}</td>
+                                <td><button class="btn btn-primary" (click)="updateTiming(timing)">Update Timing</button></td>
+                                <td><button class="btn btn-danger" (click)="deleteTiming(timing)">Delete Timing</button></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                   
+                  </div>
+            </div>
+        </div>
+    <br>
+    </div>
+      
 </div>

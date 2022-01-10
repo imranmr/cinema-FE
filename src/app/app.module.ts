@@ -20,6 +20,7 @@ import { ToTwelveHourTimePipe } from './to-twelve-hour-time.pipe';
 import { PickseatsComponent } from './components/pickseats/pickseats.component';
 import { OrderpageComponent } from './components/orderpage/orderpage.component';
 import { ConfirmationpageComponent } from './components/confirmationpage/confirmationpage.component';
+import { AddtimingComponent } from './components/addtiming/addtiming.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ConfirmationpageComponent } from './components/confirmationpage/confirm
     ToTwelveHourTimePipe,
     PickseatsComponent,
     OrderpageComponent,
-    ConfirmationpageComponent
+    ConfirmationpageComponent,
+    AddtimingComponent
   ],
   imports: [
     BrowserModule,
