@@ -10,22 +10,26 @@
             <th scope="col">Ticket Price</th>
             <th scope="col">Seats</th>
             <th scope="col">Total Price</th>
+            <th scope="col">Time</th>
+            <th scope="col">Locatione</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody *ngIf="user.adminrights != true">
+        <tbody>
         
             <tr *ngFor="let ci of user.cart.cartitems" >
                 <th scope="row">{{ci.movie.name}}</th>
                 <td>{{ci.movie.price | currency:'USD'}}</td>
                 <td>{{ci.seats}}</td>
                 <td>{{ci.price*ci.seats  | currency:'USD'}}</td>
+                <td>{{ci.movietiming.time | toTwelveHourTime: "hh:mm A"}}</td>
+                <td>{{ci.movietiming.location}}</td>
                 <td>
                     <form>
                       <label for="quantity">Change Seats:</label>
-                        <input class=quantitybox type="number" min="1" value="1" max={{ci.cartitemquantity}} id="quantity" name="quantity" #quantity>
-                        <button class="btn btn-primary" (click)="updateSeats(quantity.value)">Update</button>
-                        <button class="btn btn-danger" (click)="onDelete(ci.product.productid,user.cart.cartid, quantity.value)">Delete</button>
+                        <input class=quantitybox type="number" min="1" value="1" max={{ci.movietiming.seats}} id="quantity" name="quantity" #quantity>
+                        <button class="btn btn-primary" (click)="updateSeats(quantity.value, ci.cartitemid)">Update</button>
+                        <button class="btn btn-danger" (click)="onDelete(ci.cartitemid)">Delete</button>
                     </form>
                 </td>
               </tr>
