@@ -104,6 +104,15 @@ export class DashboardComponent implements OnInit {
 
   deleteGenre(genre:any){
     console.log("Delete Genre",genre);
+    let data = {
+      "id": genre.moviegenreid
+    }
+    console.log(data);
+    this.movieservice.deletemoviegenre(data).subscribe(
+      (res:any)=>{
+        this.updateuser();
+      }
+    )
 
   }
 

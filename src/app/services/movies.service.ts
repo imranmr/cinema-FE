@@ -20,6 +20,7 @@ export class MoviesService {
   private deletemovietimingurl:string="http://localhost:8080/movietiming/delete"
   private deletemovieurl:string="http//localhost:8080/movie/delete"
   private updatemoviegenreurl:string="http://localhost:8080/moviegenre/update"
+  private deletemoviegenreurl:string="http://localhost:8080/moviegenre/delete"
   constructor(private httpClient:HttpClient) { }
 
   public getAllMovies():any{
@@ -74,5 +75,8 @@ export class MoviesService {
     return this.httpClient.put(this.updatemoviegenreurl,data);
   }
 
+  public deletemoviegenre(data:any){
+    return this.httpClient.post(this.deletemoviegenreurl,data);
+  }
 
 }
