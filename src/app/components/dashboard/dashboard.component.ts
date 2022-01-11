@@ -23,6 +23,11 @@ export class DashboardComponent implements OnInit {
     if(this.olduser=='null'){
       this.router.navigate(['login']);
     }
+    this.updateuser();
+    
+  }
+
+  updateuser(){
     let userdetail={
       "userid":this.olduser.userid
     }
@@ -39,12 +44,8 @@ export class DashboardComponent implements OnInit {
         }
       }
     )
-
-    
-
-
-
   }
+
   resetpassword(){
     console.log("resetpassword");
     this.router.navigate(['/resetpassword'])
@@ -67,6 +68,15 @@ export class DashboardComponent implements OnInit {
   }
   deleteTiming(timing:any){
     console.log("Delete Timing:", timing);
+    let data={
+      "id":timing.movietimingid
+    }
+    console.log(data);
+    this.movieservice.deletemovietiming(data).subscribe(
+      (res:any)=>{
+        this.updateuser();
+      }
+    )
   }
 
   addTiming(movie:any){

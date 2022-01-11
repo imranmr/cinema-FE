@@ -17,6 +17,7 @@ export class MoviesService {
   private addmovietimingurl:string="http://localhost:8080/movietiming/add"
   private updatemovieurl:string="http://localhost:8080/movie/update"
   private updatemovietimingurl:string="http://localhost:8080/movietiming/update"
+  private deletemovietimingurl:string="http://localhost:8080/movietiming/delete"
   constructor(private httpClient:HttpClient) { }
 
   public getAllMovies():any{
@@ -57,5 +58,9 @@ export class MoviesService {
 
   public updatemovietiming(data:any){
     return this.httpClient.put(this.updatemovietimingurl,data);
+  }
+
+  public deletemovietiming(data:any){
+    return this.httpClient.post(this.deletemovietimingurl,data);
   }
 }
