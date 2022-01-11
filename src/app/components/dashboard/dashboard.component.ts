@@ -58,7 +58,17 @@ export class DashboardComponent implements OnInit {
   }
 
   deleteMovie(movie:any){
-    console.log("Delete Movie:", movie);
+    console.log("Delete Movie");
+    let data = {
+      "id":movie.movieid
+    }
+
+    console.log("Data:",data);
+    this.movieservice.deletemovie(data).subscribe(
+      (res:any)=>{
+        this.updateuser();
+      }
+    )
   }
 
   updateTiming(timing:any){
@@ -83,6 +93,18 @@ export class DashboardComponent implements OnInit {
     console.log("Add timing to movie:",movie);
     this.data.updateMovie(movie);
     this.router.navigate(['addtiming'])
+  }
+
+
+  updateGenre(genre:any){
+    console.log("Update Genre",genre);
+    this.data.updateGenre(genre);
+    this.router.navigate(['updategenre'])
+  }
+
+  deleteGenre(genre:any){
+    console.log("Delete Genre",genre);
+
   }
 
 }

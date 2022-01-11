@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Update Genre</h1>
+    <h3>Genre Details:</h3>
+    <p>Genre ID: {{genre.moviegenreid}}</p>
+    <p>Genre: {{genre.genre}}</p>
+
+    <form action="" (ngSubmit)="updategenre(genreinput.value)">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Genre</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #genreinput required>
+                </div>
+                
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+
+</div>

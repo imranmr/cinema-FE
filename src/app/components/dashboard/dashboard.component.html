@@ -110,6 +110,26 @@
                               </tr>
                         </tbody>
                       </table>
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Genre ID</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let genre of movie.moviegenre">
+                                <th scope="row">{{genre.moviegenreid}}</th>
+                                
+                                <td>{{genre.genre}}</td>
+                            
+                                <td><button class="btn btn-primary" (click)="updateGenre(genre)">Update Genre</button></td>
+                                <td><button class="btn btn-danger" (click)="deleteGenre(genre)">Delete Genre</button></td>
+                              </tr>
+                        </tbody>
+                      </table>
                    
                   </div>
             </div>
