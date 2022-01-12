@@ -61,8 +61,16 @@
 <div class="container" *ngIf="user.adminrights">
     <h3> Admin Portal: </h3>
     <br>
-
-    <h3>Movies</h3>
+    <div class="row">
+      <div class="col">
+        <h3>Movies</h3>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" (click)="addMovie(user)">Add Movie</button>
+      </div>
+      <br>
+    </div>
+    
     <div class="card" *ngFor="let movie of movies">
         <div class="row">
             <div class="col">

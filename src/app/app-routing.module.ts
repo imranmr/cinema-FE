@@ -1,3 +1,4 @@
+import { AddmovieComponent } from './components/addmovie/addmovie.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AddgenreComponent } from './components/addgenre/addgenre.component';
 import { UpdategenreComponent } from './components/updategenre/updategenre.component';
@@ -33,13 +34,14 @@ const routes: Routes = [
   {path:"movietimes",component:MovietimesComponent},
   {path:"seats",component:PickseatsComponent},
   {path:"orderpage",component:OrderpageComponent,canActivate:[AuthGuard]},
-  {path:"confirmationpage",component:ConfirmationpageComponent},
-  {path:"addtiming",component:AddtimingComponent},
-  {path:"updatemovie",component:UpdatemovieComponent},
-  {path:"updatemovietime",component:UpdatemovietimeComponent},
-  {path:"updategenre",component:UpdategenreComponent},
-  {path:"addgenre",component:AddgenreComponent},
-  {path:"registration",component:RegistrationComponent}
+  {path:"confirmationpage",component:ConfirmationpageComponent,canActivate:[AuthGuard]},
+  {path:"addtiming",component:AddtimingComponent,canActivate:[AuthGuard]},
+  {path:"updatemovie",component:UpdatemovieComponent,canActivate:[AuthGuard]},
+  {path:"updatemovietime",component:UpdatemovietimeComponent,canActivate:[AuthGuard]},
+  {path:"updategenre",component:UpdategenreComponent,canActivate:[AuthGuard]},
+  {path:"addgenre",component:AddgenreComponent,canActivate:[AuthGuard]},
+  {path:"registration",component:RegistrationComponent},
+  {path:"addmovie",component:AddmovieComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

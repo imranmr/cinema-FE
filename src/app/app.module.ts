@@ -26,6 +26,7 @@ import { UpdatemovietimeComponent } from './components/updatemovietime/updatemov
 import { UpdategenreComponent } from './components/updategenre/updategenre.component';
 import { AddgenreComponent } from './components/addgenre/addgenre.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { AddmovieComponent } from './components/addmovie/addmovie.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     UpdatemovietimeComponent,
     UpdategenreComponent,
     AddgenreComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    AddmovieComponent
   ],
   imports: [
     BrowserModule,
