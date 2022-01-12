@@ -16,9 +16,10 @@ export class LoginComponent implements OnInit {
   public submitted: boolean = false;
   usersub: Subscription = new Subscription;
   user: any;
+  userid:any;
   public emailpassworderror: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private router:Router, private authservice:AuthService, private data:DataserviceService) {
+  constructor(private formBuilder: FormBuilder, private router:Router, private authservice:AuthService, private data:DataserviceService, private userservice:UserService) {
     this.loginForm = this.formBuilder.group({
       email:['',[Validators.required, Validators.email]],
       password:['',[Validators.required,Validators.minLength(5),Validators.maxLength(15)]]
@@ -26,6 +27,22 @@ export class LoginComponent implements OnInit {
    }
   
   ngOnInit(): void {
+    console.log("Userid:",localStorage.getItem('userid'));
+    if (localStorage.getItem('userid') !=null){
+      this.userid = localStorage.getItem('userid');
+      let data = {
+        "userid":this.userid
+      }
+      this.userservice.getlatestuserdetail(data).subscribe(
+        (res:any)=>{
+          this.data.updateUser(res);
+          localStorage.setItem('isLoggedIn',"true");
+          this.router.navigate(['dashboard']);
+        }
+      )
+    }
+
+    
   }
 
   onSubmit(loginForm: any){

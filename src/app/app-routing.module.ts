@@ -1,3 +1,5 @@
+import { RegistrationComponent } from './components/registration/registration.component';
+import { AddgenreComponent } from './components/addgenre/addgenre.component';
 import { UpdategenreComponent } from './components/updategenre/updategenre.component';
 import { UpdatemovietimeComponent } from './components/updatemovietime/updatemovietime.component';
 import { UpdatemovieComponent } from './components/updatemovie/updatemovie.component';
@@ -16,6 +18,7 @@ import { AboutmovieComponent } from './components/aboutmovie/aboutmovie.componen
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { registerLocaleData } from '@angular/common';
 
 
 const routes: Routes = [
@@ -34,7 +37,9 @@ const routes: Routes = [
   {path:"addtiming",component:AddtimingComponent},
   {path:"updatemovie",component:UpdatemovieComponent},
   {path:"updatemovietime",component:UpdatemovietimeComponent},
-  {path:"updategenre",component:UpdategenreComponent}
+  {path:"updategenre",component:UpdategenreComponent},
+  {path:"addgenre",component:AddgenreComponent},
+  {path:"registration",component:RegistrationComponent}
 ];
 
 @NgModule({

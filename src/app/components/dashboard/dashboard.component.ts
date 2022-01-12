@@ -3,6 +3,7 @@ import { UserService } from './../../services/user.service';
 import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/services/dataservice.service';
 import { Component, OnInit } from '@angular/core';
+import { toBase64String } from '@angular/compiler/src/output/source_map';
 
 @Component({
   selector: 'app-dashboard',
@@ -114,6 +115,12 @@ export class DashboardComponent implements OnInit {
       }
     )
 
+  }
+
+  addGenre(movie:any){
+    console.log("Adding Genre")
+    this.data.updateMovie(movie);
+    this.router.navigate(['addgenre'])
   }
 
 }

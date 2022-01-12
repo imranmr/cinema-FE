@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Adding Movie Genre:</h1>
+    <h3>Movie Details:</h3>
+    <p>Name: {{movie.name}}</p>
+    <p>Price: {{movie.price | currency:'USD'}}</p>
+    <p>Description: {{movie.description}}</p>
+    <p>Runtime: {{movie.hours}}:{{movie.minutes}}</p>
+    <p>Rating: {{movie.rating}}</p>
+    <p>Release Date: {{movie.releasedate}}</p>
+    <p>PosterURL: {{movie.posterurl}}</p>
+
+    <form action="" (ngSubmit)="addGenre(genreinput.value)">
+        <div class="row">
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Genre</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #genreinput required>
+                </div>
+                
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+</div>

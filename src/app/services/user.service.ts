@@ -12,6 +12,7 @@ export class UserService {
   private getlatestuserurl:string="http://localhost:8080/user/detail"
   private updateseatsurl:string="http://localhost:8080/cart/update"
   private deletecartitemurl:string="http://localhost:8080/cart/delete"
+  private createuserurl:string="http://localhost:8080/user/create"
 
   constructor(private httpClient:HttpClient,private data:DataserviceService) { }
 
@@ -39,6 +40,8 @@ export class UserService {
     return this.httpClient.post(this.deletecartitemurl,item);
   }
 
-
+  public createuser(data:any){
+    return this.httpClient.post(this.createuserurl,data);
+  }
 
 }

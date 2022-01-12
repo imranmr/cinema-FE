@@ -58,6 +58,7 @@ export class DataserviceService {
 
   logout() :void {    
       localStorage.setItem('isLoggedIn','false'); 
+      localStorage.removeItem('userid');
       this.updateUser('null');     
   }    
 

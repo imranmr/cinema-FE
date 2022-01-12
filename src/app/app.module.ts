@@ -24,6 +24,8 @@ import { AddtimingComponent } from './components/addtiming/addtiming.component';
 import { UpdatemovieComponent } from './components/updatemovie/updatemovie.component';
 import { UpdatemovietimeComponent } from './components/updatemovietime/updatemovietime.component';
 import { UpdategenreComponent } from './components/updategenre/updategenre.component';
+import { AddgenreComponent } from './components/addgenre/addgenre.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { UpdategenreComponent } from './components/updategenre/updategenre.compo
     AddtimingComponent,
     UpdatemovieComponent,
     UpdatemovietimeComponent,
-    UpdategenreComponent
+    UpdategenreComponent,
+    AddgenreComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
