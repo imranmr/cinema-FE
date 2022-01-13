@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoviesService {
-  private iporlocalhost:string="34.230.0.58.0:8081"//"localhost:8080"
+  private iporlocalhost:string="34.230.58.0:8081"//"localhost:8080"
   private getallmoviesurl:string="http://"+this.iporlocalhost+"/movie/all"
   private getmovielocationsurl:string="http://"+this.iporlocalhost+"/movietiming/get/location"
   private getmovietimingurl:string="http://"+this.iporlocalhost+"/movietiming/search/location"

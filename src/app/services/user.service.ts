@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  private iporlocalhost:string="34.230.0.58.0:8081"//"localhost:8080"
+  private iporlocalhost:string="34.230.58.0:8081"//"localhost:8080"
   private resetpasswordurl:string="http://"+this.iporlocalhost+"/user/resetpassword"
   private addtocarturl:string="http://"+this.iporlocalhost+"/cart/add"
   private buycarturl:string="http://"+this.iporlocalhost+"/order/buy"
