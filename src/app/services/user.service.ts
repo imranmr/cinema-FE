@@ -6,13 +6,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  private resetpasswordurl:string="http://localhost:8080/user/resetpassword"
-  private addtocarturl:string="http://localhost:8080/cart/add"
-  private buycarturl:string="http://localhost:8080/order/buy"
-  private getlatestuserurl:string="http://localhost:8080/user/detail"
-  private updateseatsurl:string="http://localhost:8080/cart/update"
-  private deletecartitemurl:string="http://localhost:8080/cart/delete"
-  private createuserurl:string="http://localhost:8080/user/create"
+  private iporlocalhost:string="34.230.0.58.0:8081"//"localhost:8080"
+  private resetpasswordurl:string="http://"+this.iporlocalhost+"/user/resetpassword"
+  private addtocarturl:string="http://"+this.iporlocalhost+"/cart/add"
+  private buycarturl:string="http://"+this.iporlocalhost+"/order/buy"
+  private getlatestuserurl:string="http://"+this.iporlocalhost+"/user/detail"
+  private updateseatsurl:string="http://"+this.iporlocalhost+"/cart/update"
+  private deletecartitemurl:string="http://"+this.iporlocalhost+"/cart/delete"
+  private createuserurl:string="http://"+this.iporlocalhost+"/user/create"
 
   constructor(private httpClient:HttpClient,private data:DataserviceService) { }
 

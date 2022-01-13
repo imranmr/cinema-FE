@@ -6,23 +6,23 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoviesService {
-
-  private getallmoviesurl:string="http://localhost:8080/movie/all"
-  private getmovielocationsurl:string="http://localhost:8080/movietiming/get/location"
-  private getmovietimingurl:string="http://localhost:8080/movietiming/search/location"
-  private getorderdetailsurl:string="http://localhost:8080/order/getorder"
-  private searchmovieurl:string="http://localhost:8080/movie/search"
-  private getgenresurl:string="http://localhost:8080/moviegenre/all"
-  private searchmoviewithgenreurl:string="http://localhost:8080/movie/search/genre/"
-  private addmovietimingurl:string="http://localhost:8080/movietiming/add"
-  private updatemovieurl:string="http://localhost:8080/movie/update"
-  private updatemovietimingurl:string="http://localhost:8080/movietiming/update"
-  private deletemovietimingurl:string="http://localhost:8080/movietiming/delete"
-  private deletemovieurl:string="http//localhost:8080/movie/delete"
-  private updatemoviegenreurl:string="http://localhost:8080/moviegenre/update"
-  private deletemoviegenreurl:string="http://localhost:8080/moviegenre/delete"
-  private addmoviegenreurl:string="http://localhost:8080/moviegenre/add"
-  private addmovieurl:string="http://localhost:8080/movie/add"
+  private iporlocalhost:string="34.230.0.58.0:8081"//"localhost:8080"
+  private getallmoviesurl:string="http://"+this.iporlocalhost+"/movie/all"
+  private getmovielocationsurl:string="http://"+this.iporlocalhost+"/movietiming/get/location"
+  private getmovietimingurl:string="http://"+this.iporlocalhost+"/movietiming/search/location"
+  private getorderdetailsurl:string="http://"+this.iporlocalhost+"/order/getorder"
+  private searchmovieurl:string="http://"+this.iporlocalhost+"/movie/search"
+  private getgenresurl:string="http://"+this.iporlocalhost+"/moviegenre/all"
+  private searchmoviewithgenreurl:string="http://"+this.iporlocalhost+"/movie/search/genre/"
+  private addmovietimingurl:string="http:/"+this.iporlocalhost+"/movietiming/add"
+  private updatemovieurl:string="http://"+this.iporlocalhost+"/movie/update"
+  private updatemovietimingurl:string="http://"+this.iporlocalhost+"/movietiming/update"
+  private deletemovietimingurl:string="http://"+this.iporlocalhost+"/movietiming/delete"
+  private deletemovieurl:string="http//"+this.iporlocalhost+"/movie/delete"
+  private updatemoviegenreurl:string="http://"+this.iporlocalhost+"/moviegenre/update"
+  private deletemoviegenreurl:string="http://"+this.iporlocalhost+"/moviegenre/delete"
+  private addmoviegenreurl:string="http://"+this.iporlocalhost+"/moviegenre/add"
+  private addmovieurl:string="http://"+this.iporlocalhost+"/movie/add"
   constructor(private httpClient:HttpClient) { }
 
   public getAllMovies():any{
